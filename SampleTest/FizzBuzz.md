@@ -13,13 +13,13 @@ Complete the function fizzBuzz in the editor below.
 
 fizzBuzz has the following parameter(s):
 
-    int n: upper limit of values to test (inclusive)
+*int n:* upper limit of values to test (inclusive)
 
 Returns:    NONE
 
 Prints:
 
-    The function must print the appropriate response for each value i in the set {1, 2, ... n} in ascending order, each on a separate line.
+The function must print the appropriate response for each value i in the set {1, 2, ... n} in ascending order, each on a separate line.
 
 ## Constraints
 
@@ -35,46 +35,46 @@ The single integer n, the limit of the range to test: [1, 2, ...n].
 
 #### Sample Input
 
-```
-STDIN    Function
+```js
+  STDIN    Function
 
------    --------
+  -----    --------
 
-15    → n = 15
+  15    → n = 15
 ```
 
 #### Sample Output
 
-```
-1
+```js
+  1
 
-2
+  2
 
-Fizz
+  Fizz
 
-4
+  4
 
-Buzz
+  Buzz
 
-Fizz
+  Fizz
 
-7
+  7
 
-8
+  8
 
-Fizz
+  Fizz
 
-Buzz
+  Buzz
 
-11
+  11
 
-Fizz
+  Fizz
 
-13
+  13
 
-14
+  14
 
-FizzBuzz
+  FizzBuzz
 ```
 
 #### Explanation
