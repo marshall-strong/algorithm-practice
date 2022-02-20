@@ -29,6 +29,17 @@ function getNumber(binary) {
   return res;
 }
 
+// https://www.geeksforgeeks.org/javascript-program-to-find-decimal-equivalent-of-binary-linked-list/
+
+/*
+ALTERNATIVE SYNTAX using the Left Shift Operator (<<)
+The left shift operator (<<) shifts the first operand the specified number of bits to the left.
+ex: `a << b` would multiply `a` by 2 `b` times
+    res = (res << 1) + (binary.data ? 1 : 0);
+This would be equivalent to the code we used -- res gets multiplied by 2
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift
+*/
+
 /*
 SAMPLE WALKTHROUGH:
 
