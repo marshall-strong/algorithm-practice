@@ -6,7 +6,7 @@ A binary number is represented as a series of *0*'s and *1*'s. In this challenge
 
 ## Example
 
-Linked list corresponding to the binary number *(010011)[2]* or *(19)[10]*.  
+Linked list corresponding to the binary number *(010011)[base 2]* or *(19)[base 10]*.  
 
 ## Function Description
 
@@ -18,13 +18,13 @@ Complete the function *getNumber* in the editor below.
 
 ## Returns
 
-- *int*: a (long integer)[10] representation of the binary number
+- *int*: a (long integer)[base 10] representation of the binary number
 
 ## Constraints
 
 - *1 ≤ n ≤ 64*
 - All *LinkedListNode.data ∈ {01}*
-- The described *(integer)[2] < 264*
+- The described *(integer)[base 2] < 264*
 
 ## Input Format for Custom Testing
 
@@ -64,9 +64,9 @@ Each of the next *n* lines contains an integer *LinkedListNode.data[i]* where *0
 
 ### Explanation 0
 
-The linked list is given as input. 
+The linked list is given as input.
 
-The linked list forms the binary number *0011010 → (0011010)[2] = (26)[10]*
+The linked list forms the binary number *0011010 → (0011010)[base 2] = (26)[base 10]*
 
 ## Sample Case 1
 
@@ -104,6 +104,6 @@ The linked list forms the binary number *0011010 → (0011010)[2] = (26)[10]*
 
 ### Explanation 1
 
-The linked list given as input. 
+The linked list given as input.
 
 The linked list forms the binary number *0000011111 → (0000011111)[2] = (31)[10]*
