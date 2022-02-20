@@ -28,3 +28,43 @@ function getNumber(binary) {
   }
   return res;
 }
+
+/*
+SAMPLE WALKTHROUGH:
+
+//`010011` is the binary equivalent of `19`
+// this binary number has 6 digits, so the function will iterate through the while loop six times 
+// for each iteration:
+res = ((res) * 2) + (node.data)
+
+// before the while loop starts
+res = 0
+
+// first iteration
+// res equals 0; node.data equals 0
+res = ((0) * 2) + ((0))
+
+// second iteration
+// res equals 0; node.data equals 1
+res = ((0) * 2) + (1)
+
+// third iteration
+// res equals 1; node.data equals 0
+res = ((1) * 2) + (0)
+
+// fourth iteration
+// res equals 2; node.data equals 0
+res = ((2) * 2) + (0)
+
+// fifth iteration
+// res equals 4; node.data equals 1
+res = ((4) * 2) + (1)
+
+// sixth iteration
+// res equals 9; node.data equals 1
+res = ((9) * 2) + (1)
+
+// `res` now equals 19
+// `node.next` for the final node equals null, which breaks the while loop
+// we therefore return the current value of `res`, which is `19`
+*/
