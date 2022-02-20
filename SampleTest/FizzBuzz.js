@@ -63,6 +63,7 @@ function fizzBuzz2(n) {
   // this will produce `"Fizz"` if `i` is divisible by 3, `"Buzz"` if `i` is divisible by 5, and `"FizzBuzz"` if `i` is divisible by both
 
   (expr3) + (expr5) || i
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
   // if `i` is divisble by either 3 or 5, the result of the `+` operand will be truthy
   // this causes the expression to be short-circuit evaluated to the truthy expression, and `i` will not be returned
   // if `i` is divisible by neither 3 nor 5, the result will be `""`, which is falsey
