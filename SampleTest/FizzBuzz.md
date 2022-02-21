@@ -9,73 +9,71 @@ Given a number n, for each integer i in the range from 1 to n inclusive, print o
 
 ## Function Description
 
-Complete the function fizzBuzz in the editor below.
+Complete the function *fizzBuzz* in the editor below.
 
-fizzBuzz has the following parameter(s):
+*fizzBuzz* has the following parameter(s):
 
-*int n:* upper limit of values to test (inclusive)
+- *int n:* upper limit of values to test (inclusive)
 
-Returns:    NONE
+## Returns
 
-Prints:
+- NONE
 
-The function must print the appropriate response for each value i in the set {1, 2, ... n} in ascending order, each on a separate line.
+## Prints
+
+The function must print the appropriate response for each value *i* in the set *{1, 2, ... n}* in ascending order, each on a separate line.
 
 ## Constraints
 
 - 0 < n < 2 × 105
 
-### Input Format for Custom Testing
+## Input Format for Custom Testing
 
 Input from stdin will be processed as follows and passed to the function.
 
-The single integer n, the limit of the range to test: [1, 2, ...n].
+The single integer *n*, the limit of the range to test: *[1, 2, ...n]*.
 
-### Sample Case 0
+## Sample Case 0
 
-#### Sample Input
+### Sample Input 1
 
-```js
-  STDIN    Function
+    STDIN    Function
 
-  -----    --------
+    -----    --------
 
-  15    → n = 15
-```
+    15    → n = 15
 
-#### Sample Output
+### Sample Output 1
 
-```js
-  1
+    1
 
-  2
+    2
 
-  Fizz
+    Fizz
 
-  4
+    4
 
-  Buzz
+    Buzz
 
-  Fizz
+    Fizz
 
-  7
+    7
 
-  8
+    8
 
-  Fizz
+    Fizz
 
-  Buzz
+    Buzz
 
-  11
+    11
 
-  Fizz
+    Fizz
 
-  13
+    13
 
-  14
+    14
 
-  FizzBuzz
-```
+    FizzBuzz
 
 #### Explanation
 
