@@ -8,5 +8,22 @@
  */
 
 function getUmbrellas(requirement, sizes) {
-  // Write your code here
+  const umbrellasNeeded = new Array(requirement + 1).fill(Infinity);
+  umbrellasNeeded[0] = 0;
+
+  for (let umbrellaSize in sizes) {
+    for (people = 0; people <= requirement; people++) {
+      if (umbrellaSize <= people) {
+        let peopleRemaining = people - umbrellaSize;
+        let umbrellaCount = umbrellasNeeded[peopleRemaining] + 1;
+        umbrellasNeeded[people] = Math.min(umbrellasNeeded[people], umbrellaCount);
+      }
+    }
+  }
+
+  if(umbrellasNeeded[requirement] === Infinity) {
+    return -1;
+  } else {
+    return umbrellasNeeded[requirement];
+  }
 }
