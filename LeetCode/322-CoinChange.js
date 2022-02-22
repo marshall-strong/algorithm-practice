@@ -6,9 +6,38 @@
  * @return {number}
  */
 
-// https://medium.com/@ranjitharaja/coin-change-recursive-solution-in-javascript-40000edd8f5d
+// https://www.youtube.com/watch?v=kHogi2PC7EY
 
 function coinChange(coins, amount) {
+  // Creates a new array with indices for all amounts (from 0 to `amount`),
+  //  then sets each element equal to Infinity for later comparison.
+  const table = new Array(amount + 1).fill(Infinity);
+  // Sets up the base case -- if amount is `0`, return zero coins
+  table[0] = 0;
+
+  // Iterates through each coin in coins, and through each index in the table
+  //  (indices represent the different possible amount values)
+  for (let coin of coins) {
+    for (let i = 0; i < table.length; i++) {
+      if (coin <= i) {
+        let idx = i - coin;
+        let potentialCount = table[idx] + 1;
+        table[i] = Math.min(table[i], potentialCount);
+      }
+    }
+  }
+
+  if (table[amount] === Infinity) {
+    return -1;
+  } else {
+    return table[amount];
+  }
+}
+
+
+// https://medium.com/@ranjitharaja/coin-change-recursive-solution-in-javascript-40000edd8f5d
+
+function coinChangeBruteForce(coins, amount) {
   function findMinCount(coins, idxCoin, currentSum, amount, count, result) {
     console.log(`coins: ${coins}, idxCoin: ${idxCoin}, currentSum: ${currentSum}, amount: ${amount}, count: ${count}, result: ${count}`);
 
