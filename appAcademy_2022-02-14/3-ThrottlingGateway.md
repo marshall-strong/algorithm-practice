@@ -4,9 +4,9 @@ Non-critical requests for a transaction system are routed through a throttling g
 
 The gateway has the following limits:
 
-- The number of transactions in any given second cannot exceed *3*.
-- The number of transactions in any given *10* second period cannot exceed *20*. A ten-second period includes all requests arriving from any time *max(1, T-9)* to *T* (inclusive of both) for any valid time *T*.
-- The number of transactions in any given minute cannot exceed *60*.  Similar to above, one minute is from *max(1, T-59)* to *T*.
+- The number of transactions in any given second cannot exceed 3.
+- The number of transactions in any given 10 second period cannot exceed 20. A ten-second period includes all requests arriving from any time *max(1, T-9)* to *T* (inclusive of both) for any valid time *T*.
+- The number of transactions in any given minute cannot exceed 60. Similar to above, one minute is from *max(1, T-59)* to *T*.
 
 Any request that exceeds any of the above limits will be dropped by the gateway. Given the times at which different requests arrive sorted ascending, find how many requests will be dropped.
 
