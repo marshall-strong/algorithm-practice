@@ -23,13 +23,28 @@ function droppedRequests(requestTime) {
 
   // gateway limiting helper functions accept a requestTime index as a parameter
   function checkOneSecondLimit(i) {
-    if (requestTime[i] == requestTime[i - 3]) checkIfAlreadyDropped(i);
+    if (requestTime[i] == requestTime[i - 3]) {
+      console.log(
+        `A request at time ${requestTime[i]} (index ${i}) has been dropped. It exceeds the 1 second limit.`
+      );
+      checkIfAlreadyDropped(i);
+    }
   }
   function checkTenSecondLimit(i) {
-    if (requestTime[i] - requestTime[i - 20] < 10) checkIfAlreadyDropped(i);
+    if (requestTime[i] - requestTime[i - 20] < 10) {
+      console.log(
+        `A request at time ${requestTime[i]} (index ${i}) has been dropped. It exceeds the 10 second limit.`
+      );
+      checkIfAlreadyDropped(i);
+    }
   }
   function checkOneMinuteLimit(i) {
-    if (requestTime[i] - requestTime[i - 60] < 60) checkIfAlreadyDropped(i);
+    if (requestTime[i] - requestTime[i - 60] < 60) {
+      console.log(
+        `A request at time ${requestTime[i]} (index ${i}) has been dropped. It exceeds the 1 minute limit.`
+      );
+      checkIfAlreadyDropped(i);
+    }
   }
 
   const n = requestTime.length;
@@ -40,9 +55,15 @@ function droppedRequests(requestTime) {
     if (i > 59) checkOneMinuteLimit(i);
   }
 
+  console.log("dropped requests: ");
+  console.log(alreadyDropped);
+  console.log();
+  console.log("total dropped requests: " + totalDropped);
+
   return totalDropped;
 }
 
 // https://leetcode.com/discuss/interview-question/819577/Throttling-Gateway-Hackerrank
 
 const requestTimeExample = [ 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 11, 11, 11, 11 ];
+droppedRequests(requestTimeExample);
